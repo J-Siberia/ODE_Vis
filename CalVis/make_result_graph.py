@@ -28,7 +28,7 @@ unique_labels = labels.unique()
 plt.figure(figsize=(14, 8))
 for label in unique_labels:
     subset = df[labels == label]
-    plt.scatter(subset.iloc[:, 3], subset.iloc[:, 1], label=label, alpha=0.7)
+    plt.scatter(subset.iloc[:, 3], subset.iloc[:, 1], label=label, alpha=0.7, s=500)
 
 
 # y = -0.001 の横線を描画
@@ -43,7 +43,7 @@ plt.gca().yaxis.set_major_formatter(FormatStrFormatter('%.8f'))
 plt.xlabel('計算時間', fontsize=24)
 plt.ylabel('計算結果', fontsize=24)
 plt.title("$dy/dx = xy^{2}$の計算結果と計算時間", fontsize=24)
-plt.legend(fontsize=12)
+plt.legend(fontsize=12, markerscale=0.45)
 plt.grid(True)
 plt.show()
 

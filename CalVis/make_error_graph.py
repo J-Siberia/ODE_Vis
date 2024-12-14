@@ -26,7 +26,7 @@ unique_labels = labels.unique()
 plt.figure(figsize=(14, 8))
 for label in unique_labels:
     subset = df[labels == label]
-    plt.scatter(subset.iloc[:, 3], subset.iloc[:, 2], label=label, alpha=0.7)
+    plt.scatter(subset.iloc[:, 3], subset.iloc[:, 2], label=label, alpha=0.7, s=500)
 
 # Y軸を対数スケールにする場合（必要に応じてコメントアウト解除）
 plt.yscale('log')
@@ -35,7 +35,7 @@ plt.yscale('log')
 plt.xlabel('計算時間', fontsize=24)
 plt.ylabel('誤差', fontsize=26)
 plt.title("$dy/dx = xy^{2}$の誤差と計算時間", fontsize=24)
-plt.legend(fontsize=10)
+plt.legend(fontsize=10, markerscale=0.45)
 plt.grid(which='major',color='black',linestyle='-')
 plt.grid(which='minor',color='black',linestyle=':')
 plt.show()
