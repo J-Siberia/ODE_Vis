@@ -14,6 +14,9 @@ int main()
 	LARGE_INTEGER start;
 	LARGE_INTEGER end;
 
+	std::cout << std::fixed;
+	std::cout << std::setprecision(18);
+
 	// y = -2.0 / (x^2 + 400.0)の解を求める
 	// dy/dx = xy^2, y(0) = -0.005であるときの y(40) の解を求める
 	// y(40) の解析解は y(40) = -0.001
@@ -26,7 +29,7 @@ int main()
 	long double h = (b - a) / n;
 
 	std::cout << "刻み幅:" << h << std::endl;
-	std::cout << "真値:" << gt << std::endl;
+	std::cout << "x=40における真値:" << gt << std::endl;
 	
 	//オイラー法
 	long double y = y0;
